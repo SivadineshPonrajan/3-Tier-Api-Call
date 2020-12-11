@@ -1,0 +1,21 @@
+<div class="container">
+  <label for="name"></label>
+  <input type="number" [(ngModel)]='name' id="name" name="name">
+  <p>Typed name: {{ name }}</p>
+  <button (click)="get()">Get</button>
+  <button (click)="delete()">delete</button>
+  <table>
+  <tr *ngFor="let emp of biller">
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.prod }}</td>
+    <td>{{ emp.price }}</td>
+  </tr>
+  </table>
+  <br><br><hr><br><br>
+  <input type="number" [(ngModel)]='uid' id="uid" name="name">
+  <input type="text" [(ngModel)]='uname' id="uname" name="name">
+  <input type="text" [(ngModel)]='uprod' id="uprod" name="name">
+  <input type="text" [(ngModel)]='uprice' id="uprice" name="name">
+  <button (click)="post()">post</button>
+  <button (click)="update()">update</button>
+</div>
